@@ -245,7 +245,7 @@ function Add-WUGDevice {
             templateId          = "WhatsUpGoldPS"
             displayName         = "${displayName}"
             deviceType          = "${deviceType}"
-            snmpOid             = ""
+            snmpOid             = "${snmpOid}"
             snmpPort            = ""
             pollInterval        = "${PollInterval}"
             primaryRole         = "${PrimaryRole}"
