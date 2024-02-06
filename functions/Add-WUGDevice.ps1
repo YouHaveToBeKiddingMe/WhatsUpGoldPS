@@ -237,6 +237,9 @@ function Add-WUGDevice {
     if ($UpdateInterfaceNames) { $options += "update-interface-names" }
     if ($UpdateActiveMonitors) { $options += "update-active-monitors" }
     if (!$hostname) { $hostname = $DeviceAddress }
+    if (!$Brand) { $Brand = "Not Set" }
+    if (!$OS) { $OS = "Not Set" }
+    if (!$SNMPPort) { $SNMPPort = 161 }
 
     #Handle null objects
 
@@ -246,17 +249,17 @@ function Add-WUGDevice {
             templateId          = "WhatsUpGoldPS"
             displayName         = "${displayName}"
             deviceType          = "${deviceType}"
-            snmpOid             = ""
-            snmpPort            = ""
+            snmpOid             = "${snmpOid}"
+            snmpPort            = "${SNMPPort}"
             pollInterval        = "${PollInterval}"
             primaryRole         = "${PrimaryRole}"
-            subRoles            = @("Resource Attributes", "Resource Monitors")
-            os                  = ""
-            brand               = ""
-            actionPolicy        = ""
+            subRoles            = @($SubRoles)
+            os                  = "${OS}"
+            brand               = "${Brand}"
+            actionPolicy        = "${ActionPolicy}"
             note                = "${note}"
             autoRefresh         = "$true"
-            credentials         = @()
+            credentials         = @($Credentials)
             interfaces          = @(
                 @{
                     defaultInterface     = "true"
