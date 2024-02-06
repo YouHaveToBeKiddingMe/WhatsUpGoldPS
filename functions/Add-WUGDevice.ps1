@@ -246,13 +246,13 @@ function Add-WUGDevice {
             displayName         = "${displayName}"
             deviceType          = "${deviceType}"
             snmpOid             = "${snmpOid}"
-            snmpPort            = ""
+            snmpPort            = "${SNMPPort}"
             pollInterval        = "${PollInterval}"
             primaryRole         = "${PrimaryRole}"
             subRoles            = @($SubRoles)
-            os                  = ""
-            brand               = ""
-            actionPolicy        = ""
+            os                  = "${OS}"
+            brand               = "${Brand}"
+            actionPolicy        = "${snmpOid}"
             note                = "${note}"
             autoRefresh         = "$true"
             credentials         = @()
