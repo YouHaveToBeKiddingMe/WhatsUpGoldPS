@@ -249,7 +249,7 @@ function Add-WUGDevice {
             snmpPort            = ""
             pollInterval        = "${PollInterval}"
             primaryRole         = "${PrimaryRole}"
-            subRoles            = @("Resource Attributes", "Resource Monitors")
+            subRoles            = @($SubRoles)
             os                  = ""
             brand               = ""
             actionPolicy        = ""
