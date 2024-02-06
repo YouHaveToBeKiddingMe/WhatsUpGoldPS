@@ -238,6 +238,7 @@ function Add-WUGDevice {
     if (!$hostname) { $hostname = $DeviceAddress }
     if (!$Brand) { $Brand = "Not Set" }
     if (!$OS) { $OS = "Not Set" }
+    if (!$SNMPPort) { $SNMPPort = 161 }
 
     #Handle null objects
 
