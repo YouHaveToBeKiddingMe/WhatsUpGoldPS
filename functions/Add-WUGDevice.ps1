@@ -258,7 +258,7 @@ function Add-WUGDevice {
             actionPolicy        = "${snmpOid}"
             note                = "${note}"
             autoRefresh         = "$true"
-            credentials         = @()
+            credentials         = @($Credentials)
             interfaces          = @(
                 @{
                     defaultInterface     = "true"
