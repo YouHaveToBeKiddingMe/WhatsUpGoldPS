@@ -236,6 +236,8 @@ function Add-WUGDevice {
     if ($UpdateInterfaceNames) { $options += "update-interface-names" }
     if ($UpdateActiveMonitors) { $options += "update-active-monitors" }
     if (!$hostname) { $hostname = $DeviceAddress }
+    if (!$Brand) { $Brand = "Not Set" }
+    if (!$OS) { $OS = "Not Set" }
 
     #Handle null objects
 
